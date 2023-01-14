@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  dev-postgres:
+    image: postgres:14.4-alpine
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: aiueo
+      POSTGRES_PASSWORD: aiueo
+      POSTGRES_DB: aiueo
+    restart: always
+    networks:
+      - lesson
+networks:
+  lesson:
